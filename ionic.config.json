@@ -1,0 +1,7 @@
+{
+  "name": "proyect-end-mobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
