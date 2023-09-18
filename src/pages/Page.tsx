@@ -9,14 +9,16 @@ const Page: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonButtons slot="start">
-            <IonMenuButton />
-          </IonButtons>
-          <IonTitle>{name}</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+      {name !== 'Login' &&
+        <IonHeader>
+          <IonToolbar>
+            <IonButtons slot="start">
+              <IonMenuButton />
+            </IonButtons>
+            <IonTitle>{name}</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+      }
 
       <IonContent fullscreen>
         <IonHeader collapse="condense">

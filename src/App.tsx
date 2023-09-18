@@ -22,6 +22,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import { Toaster } from 'react-hot-toast';
 
 setupIonicReact();
 
@@ -33,7 +34,7 @@ const App: React.FC = () => {
           <Menu />
           <IonRouterOutlet id="main">
             <Route path="/" exact={true}>
-              <Redirect to="/page/Inbox" />
+              <Redirect to="/page/Login" />
             </Route>
             <Route path="/page/:name" exact={true}>
               <Page />
@@ -41,6 +42,12 @@ const App: React.FC = () => {
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>
+      <div className='fixed z-50'>
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+        />
+      </div>
     </IonApp>
   );
 };
